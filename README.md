@@ -1,3 +1,7 @@
-Hi there 👋
+NOTES :
 
-My name is Andrew Fandy, and I am a frontend developer in training. I have a passion for web development and am always seeking new challenges and opportunities to learn.
+1. This is a single page website
+
+2. Smooth scrolling while clicking navbar
+
+3.
