@@ -1,15 +1,161 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700;800&display=swap');
 html {
     font-size: 22px;
-    font-family: 'Poppins', sans-serif;
-    scroll-behavior: smooth ;
+    scroll-behavior: smooth;
 }
 * {
+    font-family: 'Poppins', sans-serif;
     box-sizing: border-box;
+    margin: 0 auto;
+    padding: 0;
+}
+a{
+    font-family: inherit;
+    color: inherit;
+    text-decoration: none;
+}
+li {
+    list-style-type: none;
 }
 body {
     margin: 0 auto;
     padding: 0;
     background-color: #27374D;
     color:#9DB2BF;
+    position: relative;
+}
+/* Start Here */
+
+/* Header */
+header {
+    padding: 1rem;
+    width: 100%;    
+    position: fixed;
+    top: 0;
+    z-index: 100;
+    background-color: #27374D;
+}
+
+.navbar {
+    text-align: center;
+    
+}
+.navbar-list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.navbar-item {
+    margin: 0 1.5rem;
+}
+
+.navbar-item a::after {
+    content: '';
+    display: block;
+    border-bottom: 1px solid #9DB2BF;
+    transform: scaleX(0);
+    transition: all .25s ease-in;
+}
+
+.navbar-item a:hover,
+.navbar-item a:hover::after,
+.navbar-item a:target::after {
+    transform: scaleX(1);
+    color: #DDE6ED;
+
+}
+
+/* Main Contents */
+main {
+    position : absolute;
+    width: 100%;
+}
+
+section{
+    height: 100vh;
+}
+section::before {
+    content: "";
+    display: block;
+    height: 7rem; /* Tinggi navbar Anda */
+    margin-top: -7rem; /* Negatif tinggi navbar Anda */
+    visibility: hidden;
+}
+
+#home {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    width: 100%;
+    height: 100vh;
+}
+
+.container {
+    display: flex;
+    flex-direction: column ;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.circle {
+    width: 20vmax;
+    height: 20vmax;
+    border-radius: 50%;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url("../pictures/seulgii.webp");
+}
+
+.profile-me {
+    margin: 1rem;
+}
+
+.social-media {
+    margin-top: 4rem;
+}
+.social-media-list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.social-media-item {
+    margin: 0 .5rem;
+}
+.social-media-item a:hover {
+    color: #DDE6ED;
+}
+.social-media-item .chat-me::after {
+    content: '';
+    display: none;
+    position: absolute;
+    background-color: red;
+    transform: translate(-100%, -450%);
+    transform: scale(300px,300px);
+}
+.social-media-item .chat-me:active::after {
+    display: block;
+}
+
+/* ABOUT ME SECTION */
+#about-me {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    width: 100%;
+}
+
+/* PROJECT SECTION */
+#project {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    width: 100%;
 }
